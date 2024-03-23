@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - dev
     paths:
       # Run when file is edited
       - Dockerfile
@@ -32,6 +33,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+          platforms: linux/arm64
           push: true
           tags: torben2002/caddy:2.7.6
