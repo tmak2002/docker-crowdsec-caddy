@@ -6,3 +6,4 @@ RUN xcaddy build \
 FROM caddy:2.7.6-alpine
 
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+RUN apk add --no-cache fail2ban
